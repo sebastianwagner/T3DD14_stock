@@ -14,4 +14,30 @@ use T3DD14\Stock\Domain\Model\Product;
  */
 class ProductTest extends UnitTestCase {
 
+    protected $subject = NULL;
+
+    /**
+     *
+     */
+    public function setUp() {
+        $this->subject = new Product();
+    }
+
+    /**
+     *
+     */
+    public function tearDown() {
+        unset($this->subject);
+    }
+
+    /**
+     * @test
+     */
+    public function titleInitiallyIsEmpty() {
+        $this->assertSame(
+            $this->subject->getTitle(),
+            ''
+        );
+    }
+
 }
