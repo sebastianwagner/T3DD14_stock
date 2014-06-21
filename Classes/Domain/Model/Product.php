@@ -21,4 +21,11 @@ class Product extends AbstractDomainObject {
         return $this->title;
     }
 
+    /**
+     * @param string $title
+     */
+    public function setTitle($title = '') {
+        //$this->title = $title;
+    }
+
 }

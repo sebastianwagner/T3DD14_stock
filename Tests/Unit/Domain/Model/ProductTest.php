@@ -40,4 +40,17 @@ class ProductTest extends UnitTestCase {
         );
     }
 
+    /**
+     * @test
+     */
+    public function titleSetterWorks() {
+        $title = 'foo';
+        $this->subject->setTitle();
+
+        $this->assertSame(
+            $this->subject->getTitle(),
+            $title
+        );
+    }
+
 }
