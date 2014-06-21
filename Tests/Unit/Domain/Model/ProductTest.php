@@ -63,4 +63,12 @@ class ProductTest extends UnitTestCase {
         $this->subject->setSize(0);
     }
 
+    /**
+     * @test
+     * @expectedException InvalidArgumentException
+     */
+    public function setSizeThrowsExceptionForZero() {
+        $this->subject->setSize(-1);
+    }
+
 }

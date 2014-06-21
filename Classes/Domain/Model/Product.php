@@ -33,4 +33,18 @@ class Product extends AbstractDomainObject {
         $this->title = $title;
     }
 
+    /**
+     * @param int $size
+     * @throws \InvalidArgumentException
+     */
+    public function setSize($size = 0) {
+        if($size < 0) {
+            throw new \InvalidArgumentException(
+                '$size must be >= 0, but actually is: ' . $size,
+                1403347803
+            );
+        }
+        $this->size = $size;
+    }
+
 }
