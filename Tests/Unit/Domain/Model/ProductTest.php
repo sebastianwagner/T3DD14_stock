@@ -14,6 +14,9 @@ use T3DD14\Stock\Domain\Model\Product;
  */
 class ProductTest extends UnitTestCase {
 
+    /**
+     * @var Product
+     */
     protected $subject = NULL;
 
     /**
@@ -45,7 +48,7 @@ class ProductTest extends UnitTestCase {
      */
     public function titleSetterWorks() {
         $title = 'foo';
-        $this->subject->setTitle();
+        $this->subject->setTitle($title);
 
         $this->assertSame(
             $this->subject->getTitle(),
