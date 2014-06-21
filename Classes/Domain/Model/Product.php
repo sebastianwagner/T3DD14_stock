@@ -12,8 +12,11 @@ class Product extends AbstractDomainObject {
     /**
      * @var string
      */
-    protected $title;
+    protected $title = '';
 
+    /**
+     * @return string
+     */
     public function getTitle() {
         return $this->title;
     }
