@@ -56,4 +56,11 @@ class ProductTest extends UnitTestCase {
         );
     }
 
+    /**
+     * @test
+     */
+    public function setSizeNotThrowsException() {
+        $this->subject->setSize(0);
+    }
+
 }
